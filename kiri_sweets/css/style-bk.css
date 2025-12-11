@@ -1,0 +1,376 @@
+/* 英語のフォントは先に書く */
+body {
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    letter-spacing: 0.05em;
+    color: #3c301e;
+}
+img {
+    width: 100%;
+}
+
+/* header */
+.header {
+    position: fixed;/*画面上部に固定する指示*/
+    top: 0;
+    left: 0;
+    /* rgbaはrgb（色）＋a（透明度）で指定できる */
+    border-bottom: 1px solid rgba(241, 238,228, 0.25);
+    /* borderをいっぱいに伸ばす指示 */
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+}
+.header-logo {
+    width: 200px;
+    margin: 0 auto;
+}
+.header-nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /*リストの感覚*/
+}
+.header-nav {
+    margin-top: 10px;
+}
+.header-nav-link {
+    color: #fff;
+}
+/* ドロワーメニュー（最初は非表示） */
+/* ドロワーメニュー初期設定 */
+.js-menu-toggle {
+  position: relative; /* サブメニューの基準位置にする */
+}
+
+.drawer-menu {
+  display: none;
+  position: absolute;
+  top: 235%;
+  left: -65%;
+  background-color: rgba(0, 0, 0, 0.40);
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  min-width: 100px;
+  z-index: 10;
+}
+
+.drawer-menu li a {
+  display: block;
+  padding: 8px 16px;
+  color: #fff;
+  text-decoration: none;
+}
+/* 共通クラス */
+.inner {
+    padding: 0 40px;
+}
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.section-heading-l {
+    color: #fff;
+}
+.section-heading-main {
+    display: block;
+    font-size: 40px;
+}
+.section-heading-sub {
+    display: block;
+    font-size: 12px;
+}
+/* fv */
+.fv-picture img {
+    width: 100%;
+}
+/* aboutセクション */
+.about {
+    padding: 40px 0;
+    background-color: #f1eee4;
+}
+.about-img {
+    width: 100%;
+}
+.about-text-contents{
+    margin-top: 20px;
+}
+.about-text {
+    font-size: 14px;
+    line-height: 2;
+}
+/* 隣り合う要素 */
+.about-text + .about-text {
+    margin-top: 16px;
+}
+/* menuセクション */
+.menu {
+    background-color:  #f1eee4;
+    padding: 80px 0;
+}
+/* menu-itemに隣り合うmenu-item */
+.menu-item + .menu-item {
+    margin-top: 62px;
+}
+.menu-img {
+    width: 100%;
+}
+.menu-text-contents {
+    text-align: center;
+    padding: 16px 10px;
+}
+.menu-name-main {
+    font-size: 18px;
+    display: block;
+}
+.menu-name-sub {
+    color:  #a98c5f;
+    font-size: 12px;
+    display: block;
+    margin-top: 8px;
+
+}
+.menu-text {
+    font-size: 14px;
+    color: #a98c5f;
+    margin-top: 16px;
+}
+
+/* モーダルの実装 */
+.js-menu-img {
+    cursor: pointer;
+}
+.modal {
+    display: none;
+    position: fixed;/* 画面をスクロールしても常に同じ位置に固定される。 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;/* 横方向中央寄せ */
+    align-items: center; /* 縦方向中央寄せ */
+    z-index: 999;/* 他の要素より前に表示するための指定 */
+}
+.modal-overlay {
+    position: absolute;/*absolute は「position がある親」を探して動く！
+それが relative でも fixed でもOK！*/
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+}
+.modal-contents {
+    position: relative;
+    top: 20%;
+    left: 25%;
+    max-width: 50%;
+    max-height: 50%;
+    z-index: 2;
+    /* overflow: hidden; */
+}
+.modal-contents img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.modal-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* shopセクション */
+.shop {
+    background-image: url(../img/sp/bg-shop.png);
+    background-position: center;
+    background-size: cover;
+    padding: 80px 0;
+}
+.shop-inner {
+    padding: 0 20px;
+}
+.shop-text {
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 2;
+}
+.form {
+    margin-top: 40px;
+}
+.form-input {
+    width: 100%;
+    border-radius: 4px;
+    background-color: rgba(255, 255,255, 0.7);
+    border: none;
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    padding: 14px;
+}
+.form-submit {
+    border-radius: 4px;
+    border: none;
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    display: block;
+    margin: 10px auto 0;
+    width: 120px;
+    padding: 12px 10px;
+    color: #fff;
+    background-color: #a98c5f;
+}
+
+/* footer */
+.footer {
+    background-color: #3c301e;
+    text-align: center;
+    padding-top: 46px;
+    color: #fff;
+}
+.footer-logo {
+    width: 200px;
+    margin: 0 auto;
+}
+.footer-text {
+    font-size: 12px;
+}
+.footer-nav-list {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 0 20px;
+}
+.footer-nav-link-text {
+    font-size: 12px;
+    margin-top: 20px;
+}
+.sns-img {
+    width: 56px;
+}
+.footer-copy-wrapper {
+    border-top: 1px solid rgba(241, 238,228, 0.25);
+    padding: 12px;
+    margin-top: 46px;
+}
+.footer-copyright {
+    font-size: 12px;
+}
+
+#backToTopBtn {
+  position: fixed;
+  font-weight: bold;
+  bottom: 30px;
+  right: 30px;
+  width: 55px; /* ボタンの幅 */
+  height: 55px; /* ボタンの高さ */
+  border-radius: 50%; /* 角丸を50%にして丸くする */
+  background-color: white; /* 背景色を白に */
+  color: #333; /* 文字色を黒に近い色に */
+  text-align: center; /* テキストを中央揃え */
+  line-height: 40px; /* 行の高さをボタンの高さに合わせる */
+  font-size: 12px; /* フォントサイズ */}
+/* タブレット、PCサイズの表示 */
+@media screen and (min-width: 768px) {
+    body {
+        letter-spacing: 0.05em;
+        color: #3c301e;
+    }
+    .header {
+        padding: 16px;
+    }
+    .header-inner {
+        max-width: 1080px;
+        padding: 0 40px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .header-logo {
+        margin: 0;
+    }
+    .header-nav-list {
+        gap: 40px;
+    }
+    .header-nav-link {
+        transition: opacity 0.3s;
+    }
+    .header-nav-link:hover {
+        opacity: 0.7;
+    }
+    .inner {
+        max-width: 1080px;
+        padding: 0 40px;
+        margin: 0 auto;
+    }
+    .section-heading-main {
+        font-size: 64px;
+    }
+    .about {
+        padding: 100px 0;
+    }
+    .about-contents {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+    .about-img {
+       width: 300px;
+    }
+    .about-text-content {
+        margin-top: 0;
+    }
+    .about-text {
+        font-size: 15px;
+    }
+    .about-text + .about-text {
+        margin-top: 30px;
+    }
+    .menu {
+        padding: 0 0 100px;
+    }
+    .menu-list {
+        display: flex;
+        gap: 20px;
+    }
+    .menu-item + .menu-item {
+        margin-top: 0;
+    }
+     .shop {
+        background-image: url(../img/bg-shop.png);
+        background-position: center;
+        background-size: cover;
+        padding: 60px 0;
+    }
+    .shop-inner {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .form {
+        display: flex;
+        gap: 20px;
+    }
+    .form-submit {
+        margin-top: 0;
+        transition: opacity 0.3s;
+    }
+    .form-submit:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+   .footer-text {
+        margin-top: 12px;
+   }
+   .footer-nav-list {
+        gap: 40px;
+   }
+   .footer-copyright {
+        font-size: 13px;
+   }
+}

@@ -1,0 +1,128 @@
+@use "color" as *;
+@use "sass:map";
+
+// mixin、基本スタイル、レスポンシブ、共通クラス、ボタン、モーダルなど
+// レスポンシブ
+$breakpoints: (
+  sp: "width < 768px",
+  pc: "width >= 768px",
+);
+@mixin mq($breakpoint: pc) {
+  @media (map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin bg-cover($img-url) {
+  background-image: url(#{$img-url});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body {
+  font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  color: $color-main;
+
+  @include mq(pc) {
+    letter-spacing: 0.05em;
+    color: $color-main;
+  }
+}
+img {
+  width: 100%;
+}
+
+/* 共通クラス */
+.inner {
+  padding: 0 40px;
+
+  @include mq(pc) {
+    max-width: 1080px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+}
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+  .section-heading-main {
+    display: block;
+    font-size: 40px;
+
+    @include mq(pc) {
+      font-size: 64px;
+    }
+  }
+  .section-heading-sub {
+    display: block;
+    font-size: 12px;
+  }
+}
+.section-heading-l {
+  color: $color-text-sub;
+}
+
+// モーダル
+
+// .js-menu-img {
+//   cursor: pointer;
+// }
+
+// .modal {
+//   display: none;
+//   position: fixed; /* 画面をスクロールしても常に同じ位置に固定される。 */
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   @include flexCenter;
+//   /* 横方向中央寄せ */
+//   /* 縦方向中央寄せ */
+//   z-index: 999; /* 他の要素より前に表示するための指定 */
+
+//   .modal-overlay {
+//     position: absolute; /*absolute は「position がある親」を探して動く！
+// それが relative でも fixed でもOK！*/
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(0, 0, 0, 0.7);
+//     top: 0;
+//     left: 0;
+//   }
+// }
+
+// .modal-contents {
+//   position: relative;
+//   //   top: 20%;
+//   //   left: 25%; @include flexCenter;付けたらいらなくなった。
+//   max-width: 50%;
+//   max-height: 50%;
+//   z-index: 2;
+//   /* overflow: hidden; */
+
+//   .js-modal-img {
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
+
+// .modal-close {
+//   position: absolute;
+//   top: -15px;
+//   right: -15px;
+//   background: $color-bg-sub;
+//   border: none;
+//   border-radius: 50%;
+//   width: 30px;
+//   height: 30px;
+//   font-size: 18px;
+//   cursor: pointer;
+//   z-index: 3;
+// }

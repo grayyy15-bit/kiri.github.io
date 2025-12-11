@@ -1,0 +1,91 @@
+/* header */
+@use "color" as *;
+@use "page" as *;
+
+a .header-nav-link {
+  color: $color-text-sub;
+  text-decoration: none;
+}
+.header {
+  position: fixed; /*画面上部に固定する指示*/
+  top: 0;
+  left: 0;
+  /* rgbaはrgb（色）＋a（透明度）で指定できる */
+  border-bottom: 1px solid rgba(241, 238, 228, 0.25);
+  /* borderをいっぱいに伸ばす指示 */
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+
+  @include mq(pc) {
+    padding: 16px;
+
+    .header-inner {
+      max-width: 1080px;
+      padding: 0 40px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+.header-logo {
+  width: 200px;
+  margin: 0 auto;
+
+  @include mq(pc) {
+    margin: 0;
+  }
+}
+.header-nav-list {
+  @include flexCenter;
+  gap: 20px; /*リストの感覚*/
+
+  @include mq(pc) {
+    gap: 40px;
+  }
+}
+.header-nav {
+  margin-top: 10px;
+}
+.header-nav-link {
+  color: #fff;
+
+  @include mq(pc) {
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.7;
+      cursor: pointer;
+    }
+  }
+}
+// .js-menu-toggle {
+//   position: relative;
+
+//   // &.js-menu-toggle {
+//   //     cursor: pointer;
+//   // }
+
+//   .drawer-menu {
+//     display: none;
+//     position: absolute;
+//     top: 235%;
+//     left: -65%;
+//     background-color: rgba(0, 0, 0, 0.4);
+//     list-style: none;
+//     margin: 0;
+//     padding: 8px 0;
+//     min-width: 100px;
+//     z-index: 10;
+//     border-radius: 4px;
+
+//     li {
+//       a {
+//         display: block;
+//         padding: 8px 16px;
+//         color: $color-text-sub;
+//         text-decoration: none;
+//       }
+//     }
+//   }
+// }

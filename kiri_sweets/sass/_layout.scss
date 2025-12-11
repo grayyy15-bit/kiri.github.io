@@ -1,0 +1,180 @@
+@use "sass:map";
+@use "color" as *;
+// レスポンシブ
+$breakpoints: (
+  sp: "width < 768px",
+  pc: "width >= 768px",
+);
+@mixin mq($breakpoint: pc) {
+  @media (map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+// Aboutセクション
+.about {
+  padding: 40px 0;
+  background-color: $color-bg;
+
+  .about-img {
+    width: 100%;
+  }
+
+  .about-text-contents {
+    margin-top: 20px;
+
+    .about-text {
+      font-size: 14px;
+      line-height: 2;
+    }
+    // 隣り合う要素
+    .about-text + .about-text {
+      margin-top: 16px;
+    }
+  }
+
+  @include mq(pc) {
+    padding: 100px 0;
+
+    .about-contents {
+      display: flex;
+      // justify-self: center;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-img {
+      width: 300px;
+    }
+    .about-text-contents {
+      margin-top: 0;
+
+      .about-text {
+        font-size: 15px;
+      }
+      .about-text + .about-text {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+// Menuセクション
+.menu {
+  background-color: $color-bg;
+  padding: 80px 0;
+
+  .menu-item + .menu-item {
+    margin-top: 62px;
+  }
+
+  .menu-img {
+    width: 100%;
+  }
+
+  .menu-text-contents {
+    text-align: center;
+    padding: 16px 10px;
+
+    .menu-name-main {
+      font-size: 18px;
+      display: block;
+    }
+    .menu-name-sub {
+      color: $color-text;
+      font-size: 12px;
+      display: block;
+      margin-top: 8px;
+    }
+    .menu-text {
+      font-size: 14px;
+      color: $color-text;
+      margin-top: 16px;
+    }
+  }
+
+  @include mq(pc) {
+    padding: 0 0 100px;
+
+    .menu-list {
+      display: flex;
+      gap: 20px;
+
+      .menu-item + .menu-item {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// shopセクション
+.shop {
+  background-image: url(../img/sp/bg-shop.png);
+  background-position: center;
+  background-size: cover;
+  padding: 80px 0;
+
+  .shop-inner {
+    padding: 0 20px;
+  }
+  .shop-text {
+    color: $color-text-sub;
+    text-align: center;
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  @include mq(pc) {
+    background-image: url(../img/bg-shop.png);
+    background-position: center;
+    background-size: cover;
+    padding: 60px 0;
+    .shop-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}
+.form {
+  margin-top: 40px;
+  .form-input {
+    width: 100%;
+    border-radius: 4px;
+    background-color: $color-form-bg;
+    border: none;
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    padding: 14px;
+  }
+  .form-submit {
+    border-radius: 4px;
+    border: none;
+    font-family: "Josefin Sans", "Noto Sans JP", sans-serif;
+    display: block;
+    margin: 10px auto 0;
+    width: 120px;
+    padding: 12px 10px;
+    color: $color-text-sub;
+    background-color: $color-send-bg;
+
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 0.3s;
+      cursor: pointer;
+    }
+  }
+
+  @include mq(pc) {
+    display: flex;
+    gap: 20px;
+
+    .form-submit {
+      margin-top: 0;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+    }
+  }
+}
