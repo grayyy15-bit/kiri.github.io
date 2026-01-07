@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 検索にヒットさせない -->
+    <meta name="robots" content="noindex" />
+
+    <title>Kiri's Portfolio</title>
+    <meta
+      name="description"
+      content="フリーランスのWEBコーダー、Kiriのポートフォリオサイトです。これまでの制作実績やスキルセット、連絡先などを掲載しています。"
+    />
+    <!-- Googleフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monda:wght@400..700&family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <!-- スタイルシート -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo"><a href="#">Kiri's Portfolio</a></div>
+        <button type="button" id="js-button-drawer" class="header__menu-button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="js-drawer" class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#about" class="header__nav-link button">
+                <span class="button__text">About</span>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#works" class="header__nav-link button">
+                <span class="button__text">Works</span>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#contact" class="header__nav-link button">
+                <span class="button__text">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="fv">
+        <picture class="fv__img">
+          <source media="(min-width: 768px)" srcset="./img/img_fv.jpg" />
+          <img src="./img/sp/img_fv.jpg" alt="" />
+        </picture>
+      </div>
+
+      <section id="service" class="section service">
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">Service</span>
+            <span class="section__head-sub">提供サービス</span>
+          </h2>
+          <div class="section__contents">
+            <ul class="service__list">
+              <li class="service__item">
+                <div class="service__item-img">
+                  <img src="./img/img_service1.svg" alt="" />
+                </div>
+                <h3 class="service__item-name">ホームページ制作</h3>
+                <p class="service__item-text">
+                  ご希望のイメージ等をしっかりヒヤリングし、オリジナルのホームページを制作いたします。
+                </p>
+              </li>
+              <li class="service__item">
+                <div class="service__item-img">
+                  <img src="./img/img_service2.svg" alt="" />
+                </div>
+                <h3 class="service__item-name">ホームページ修正</h3>
+                <p class="service__item-text">
+                  Webサイトのデザインやコンテンツの修正、機能追加などを承ります。
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="works" class="section works">
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">Works</span>
+            <span class="section__head-sub">実績紹介</span>
+          </h2>
+          <div class="section__contents">
+            <ul class="works__list">
+              <li class="works__item">
+                <div class="works__item-img">
+                  <img src="./img/img_works1.png" alt="" />
+                </div>
+                <h3 class="works__item-name">ポートフォリオサイト</h3>
+                <a href="#" class="works__item-link">詳しく見る</a>
+              </li>
+              <li class="works__item">
+                <div class="works__item-img">
+                  <img src="./img/img_works2.jpg" alt="" />
+                </div>
+                <h3 class="works__item-name">
+                  スイーツ店公式サイト（サンプル）
+                </h3>
+                <a
+                  href="kiri_sweets/index.html"
+                  target="_blank"
+                  class="works__item-link"
+                  >詳しく見る</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="section__inner">
+          <div class="about__container">
+            <h2 class="section__head">
+              <span class="section__head-main">About me</span>
+              <span class="section__head-sub">私について</span>
+            </h2>
+            <div div class="about__text-contents">
+              <div class="about__img">
+                <img src="./img/img_about.jpg" alt="" />
+              </div>
+              <div class="about__text">
+                <p>
+                  1996年生まれ、沖縄県出身、北海道在住。
+                  日本各地での仕事や、オーストラリアでのワーホリ経験を通して、
+                  新しい環境への適応力とコミュニケーション力を身につけてきました。
+                  <br />現在はWeb制作に魅力を感じ、コーディングの学習を進めています。<br />相手の想いを形にすることを大切に、丁寧なサイト制作を心がけています。
+                </p>
+                <p>
+                  趣味は音楽と、世界各地の暮らしや文化に触れることです。<br />
+                  好きなことは、vlogを撮ること、自然の中で過ごすこと、コーヒー、クラフトビールを楽しむことです。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="flow" class="section flow">
+        <div class="section__inner">
+          <h2 class="section__head">
+            <span class="section__head-main">Work Flow -</span>
+            <span class="section__head-sub">制作の流れ</span>
+          </h2>
+          <!-- <p class="section__lead-text">
+              ご相談〜納品までの大まかな流れです。状況に応じて柔軟に対応いたします。
+            </p> -->
+          <div class="section__contents">
+            <ol class="flow__list">
+              <li class="flow__item">
+                <p class="flow__item-num">1</p>
+                <div class="flow__item-img">
+                  <img src="./img/img_flow1.svg" alt="" />
+                </div>
+                <h3 class="flow__item-name">ご相談・お見積り</h3>
+                <!-- <p class="floe__item-text">準備中</p> -->
+              </li>
+              <li class="flow__item">
+                <p class="flow__item-num">2</p>
+                <div class="flow__item-img">
+                  <img src="./img/img_flow2.svg" alt="" />
+                </div>
+                <h3 class="flow__item-name">コーディング</h3>
+                <!-- <p class="floe__item-text">準備中</p> -->
+              </li>
+              <li class="flow__item">
+                <p class="flow__item-num">3</p>
+                <div class="flow__item-img">
+                  <img src="./img/img_flow3.svg" alt="" />
+                </div>
+                <h3 class="flow__item-name">確認</h3>
+                <!-- <p class="floe__item-text">準備中</p> -->
+              </li>
+              <li class="flow__item">
+                <p class="flow__item-num">4</p>
+                <div class="flow__item-img">
+                  <img src="./img/img_flow4.svg" alt="" />
+                </div>
+                <h3 class="flow__item-name">納品</h3>
+                <!-- <p class="floe__item-text">準備中</p> -->
+              </li>
+            </ol>
+          </div>
+          <!-- あとで変更する -->
+        </div>
+      </section>
+
+      <section id="message" class="section message">
+        <div class="section__inner">
+          <div class="message__container">
+            <h2 class="section__head">
+              <span class="section__head-main">Message</span>
+              <span class="section__head-sub">ご依頼をお考えの方へ</span>
+            </h2>
+            <div div class="message__text-contents">
+              <div class="message__img">
+                <img src="./img/img_message.png" alt="" />
+              </div>
+              <div class="message__text">
+                <p>あとで変更する</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="page-bottom">
+        <div class="page-bottom__item page-bottom__item--contact">
+          <!-- <h2 class="section__head section__head--center">
+              <span class="section__head-main">Contact -</span>
+              <span class="section__head-sub">準備中</span>
+            </h2> -->
+          <a
+            href="#"
+            target="_blank"
+            class="page__bottom-button button button--border"
+          >
+            <span class="button__icon">
+              <svg
+                width="20"
+                height="16"
+                viewBox="0 0 20 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.5 2.28406C2.15625 2.28406 1.875 2.56339 1.875 2.90479V3.76217L8.61328 9.25563C9.42188 9.91515 10.582 9.91515 11.3906 9.25563L18.125 3.76217V2.90479C18.125 2.56339 17.8438 2.28406 17.5 2.28406H2.5ZM1.875 6.17138V12.8365C1.875 13.1779 2.15625 13.4572 2.5 13.4572H17.5C17.8438 13.4572 18.125 13.1779 18.125 12.8365V6.17138L12.5781 10.6949C11.0781 11.917 8.91797 11.917 7.42188 10.6949L1.875 6.17138ZM0 2.90479C0 1.53531 1.12109 0.421875 2.5 0.421875H17.5C18.8789 0.421875 20 1.53531 20 2.90479V12.8365C20 14.2059 18.8789 15.3194 17.5 15.3194H2.5C1.12109 15.3194 0 14.2059 0 12.8365V2.90479Z"
+                  class="button__icon-path"
+                />
+              </svg>
+            </span>
+            <span class="button__text">Contact -</span>
+          </a>
+        </div>
+        <div class="page-bottom__item page-bottom__item--x">
+          <!-- <h2 class="section__head section__head--center">
+              <span class="section__head-main">sns -</span>
+              <span class="section__head-sub">準備中</span>
+            </h2> -->
+          <a
+            href="#"
+            target="_blank"
+            class="page__bottom-button button button--border"
+          >
+            <span class="button__icon">
+              <svg
+                width="20"
+                height="21"
+                viewBox="0 0 20 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.9441 6.40799C17.9568 6.58444 17.9568 6.76092 17.9568 6.93736C17.9568 12.3191 13.8325 18.5201 6.29441 18.5201C3.97207 18.5201 1.81473 17.8521 0 16.6926C0.329961 16.7304 0.647187 16.743 0.989844 16.743C2.90605 16.743 4.67004 16.1002 6.07867 15.0037C4.27664 14.9659 2.76648 13.7937 2.24617 12.1805C2.5 12.2183 2.75379 12.2435 3.02031 12.2435C3.38832 12.2435 3.75637 12.193 4.09898 12.1049C2.22082 11.7267 0.812148 10.0883 0.812148 8.10949V8.05909C1.35781 8.36158 1.99238 8.55063 2.66492 8.57581C1.56086 7.84479 0.837539 6.59704 0.837539 5.18543C0.837539 4.42922 1.04055 3.73602 1.3959 3.13105C3.41367 5.60136 6.44668 7.21459 9.84766 7.39107C9.78422 7.08858 9.74613 6.77353 9.74613 6.45843C9.74613 4.21496 11.5736 2.38745 13.8451 2.38745C15.0253 2.38745 16.0913 2.87899 16.84 3.67302C17.7664 3.49658 18.6547 3.15626 19.4416 2.68994C19.137 3.63523 18.4898 4.42926 17.6395 4.93337C18.4644 4.84519 19.2639 4.61827 19.9999 4.30322C19.4416 5.10981 18.7436 5.82819 17.9441 6.40799Z"
+                  class="button__icon-path"
+                />
+              </svg>
+            </span>
+            <span class="button__text">X -</span>
+          </a>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <small class="footer__copy"
+          >&copy; Kiri's Portfolio All rights reserved.</small
+        >
+      </footer>
+    </main>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
